@@ -1,0 +1,45 @@
+xmverilog(64): 21.09-s002: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xmverilog	21.09-s002: Started on Apr 02, 2023 at 15:08:13 CDT
+xmverilog
+	blian.v
+	S23_ALU_control_tb.v
+Recompiling... reason: file './S23_ALU_control_tb.v' is newer than expected.
+	expected: Sun Apr  2 02:55:04 2023
+	actual:   Sun Apr  2 14:56:43 2023
+file: blian.v
+	module worklib.ALU_control:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ALU_control:v <0x4f54a816>
+			streams:   2, words:  1378
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               3       3
+		Vectored wires:          3       -
+		Always blocks:           1       1
+		Initial blocks:          3       3
+		Pseudo assignments:      2       2
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.test_ALU_CTL:v
+Loading snapshot worklib.test_ALU_CTL:v .................... Done
+xcelium> source /usr/local/cds2008/XCELIUM/tools/xcelium/files/xmsimrc
+xcelium> run
+                   0 ALUOp=00 funct=000000 ALUctl=0010
+                   4 ALUOp=01 funct=000000 ALUctl=0110
+                   6 ALUOp=10 funct=100000 ALUctl=0010
+                   8 ALUOp=10 funct=100010 ALUctl=0110
+                  10 ALUOp=10 funct=100100 ALUctl=0000
+                  12 ALUOp=10 funct=100101 ALUctl=0001
+                  14 ALUOp=10 funct=101010 ALUctl=0111
+                  16 ALUOp=10 funct=100111 ALUctl=1100
+                  18 ALUOp=10 funct=100110 ALUctl=1110
+Simulation complete via $finish(1) at time 118 NS + 0
+./S23_ALU_control_tb.v:39        #finishtime $finish;
+xcelium> exit
+TOOL:	xmverilog	21.09-s002: Exiting on Apr 02, 2023 at 15:08:15 CDT  (total: 00:00:02)

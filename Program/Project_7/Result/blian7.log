@@ -1,0 +1,46 @@
+xmverilog(64): 21.09-s002: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xmverilog	21.09-s002: Started on Apr 21, 2023 at 04:43:41 CDT
+xmverilog
+	blian7.v
+	S23_controller_tb.v
+file: blian7.v
+	module worklib.controlUnit:v
+		errors: 0, warnings: 0
+file: S23_controller_tb.v
+	module worklib.test_controlUnit:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.controlUnit:v <0x3092b326>
+			streams:   2, words:   780
+		worklib.test_controlUnit:v <0x5c24c790>
+			streams:   6, words:  7132
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               2       2
+		Vectored wires:          2       -
+		Always blocks:           1       1
+		Initial blocks:          4       4
+		Pseudo assignments:      1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.test_controlUnit:v
+Loading snapshot worklib.test_controlUnit:v .................... Done
+xcelium> source /usr/local/cds2008/XCELIUM/tools/xcelium/files/xmsimrc
+xcelium> run
+			opcode RegDst ALUSrc MemRead MemWrite MemtoReg
+                   0	000000	x	x	x	x	x
+                   2	001111	0	0	0	0	0
+                   4	100011	0	1	1	0	1
+                   8	001111	0	0	0	0	0
+                  10	000000	0	0	0	0	0
+                  12	001000	0	1	0	0	0
+                  14	000000	1	0	0	0	0
+Simulation complete via $finish(1) at time 114 NS + 0
+./S23_controller_tb.v:36       #finishtime $finish;
+xcelium> exit
+TOOL:	xmverilog	21.09-s002: Exiting on Apr 21, 2023 at 04:43:43 CDT  (total: 00:00:02)

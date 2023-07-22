@@ -1,0 +1,45 @@
+xmverilog(64): 21.09-s002: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xmverilog	21.09-s002: Started on Mar 26, 2023 at 01:19:55 CDT
+xmverilog
+	S23_MIPS_ALU_basic.v
+	S23_MIPS_ALU_basic_tb.v
+file: S23_MIPS_ALU_basic.v
+	module worklib.MIPSALU:v
+		errors: 0, warnings: 0
+file: S23_MIPS_ALU_basic_tb.v
+	module worklib.test_alu:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.MIPSALU:v <0x1c6a49a5>
+			streams:   3, words:   926
+		worklib.test_alu:v <0x22da9d33>
+			streams:   7, words:  6160
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               4       4
+		Scalar wires:            1       -
+		Vectored wires:          4       -
+		Always blocks:           1       1
+		Initial blocks:          3       3
+		Cont. assignments:       1       1
+		Pseudo assignments:      3       3
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.test_alu:v
+Loading snapshot worklib.test_alu:v .................... Done
+xcelium> source /usr/local/cds2008/XCELIUM/tools/xcelium/files/xmsimrc
+xcelium> run
+                   0 Zero=1 ALUctl= 1 A=00000000 B=00000000 ALUOut=00000000
+                   2 Zero=0 ALUctl= 1 A=0000000c B=00000005 ALUOut=0000000d
+                   4 Zero=0 ALUctl= 1 A=0000000f B=00000006 ALUOut=0000000f
+                   6 Zero=1 ALUctl= 7 A=0000000f B=00000006 ALUOut=00000000
+                   8 Zero=0 ALUctl= 7 A=00000001 B=00000006 ALUOut=00000001
+Simulation complete via $finish(1) at time 108 NS + 0
+./S23_MIPS_ALU_basic_tb.v:34          #finishtime $finish;
+xcelium> exit
+TOOL:	xmverilog	21.09-s002: Exiting on Mar 26, 2023 at 01:19:57 CDT  (total: 00:00:02)
